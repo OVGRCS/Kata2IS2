@@ -24,9 +24,7 @@ public class frecuency {
         int aux;
         for (int i = 0; i < element.length; i++) {
             if(out.containsKey(element[i])){
-                aux = out.get(element[i]);
-                aux++;
-                out.put(element[i], aux);
+                out.put(element[i], out.get(element[i])+1);
             } else {
                 out.put(element[i], 1);
             }
