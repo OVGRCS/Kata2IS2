@@ -10,24 +10,25 @@ import java.util.HashMap;
  *
  * @author usuario
  */
-public class Frecuencia {
-    private final int[] in;
+public class Frecuencia<T> {
+    private final T[] in; 
 
-    public Frecuencia(int[] in) {
+    public Frecuencia(T[] in) {
         this.in = in;
     }
 
-    public int[] getIn() {
+    public T[] getIn() {
         return in;
     }
     
     public HashMap solver(){
-        HashMap<Integer,Integer> out = new HashMap<>();
+        HashMap<T,Integer> out = new HashMap<>();
+        
         for (int i = 0; i < in.length; i++) {
             if(out.containsKey(in[i])){
                 out.put(in[i], out.get(in[i])+1);
             }else{
-                out.put(in[i],1);
+                out.put(in[i], 1);
             }
         }
         return out;
