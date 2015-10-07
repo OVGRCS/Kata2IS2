@@ -11,14 +11,16 @@ import java.util.HashMap;
  * @author usuario
  */
 public class frecuency {
-    int[] element;
-    HashMap<Integer,Integer> out;
+    private final int[] element;
 
+    public int[] getElement() {
+        return element;
+    }
     public frecuency(int[] element) {
         this.element = element;
-        this.out = new HashMap<>();
     }
     public HashMap res(){
+        HashMap<Integer,Integer> out = new HashMap<>();
         int aux;
         for (int i = 0; i < element.length; i++) {
             if(out.containsKey(element[i])){

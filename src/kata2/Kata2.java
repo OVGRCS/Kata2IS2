@@ -19,8 +19,8 @@ public class Kata2 {
         int[] valores = {1,1,2,5,5,8,6,3,4,4,2};
         frecuency obj = new frecuency(valores);
         HashMap<Integer,Integer> salida = obj.res();
-        for (int i : valores) {
-            System.out.println(valores[i]+":"+valores.get(valores[i]+"veces"));
+        for (Integer i : salida.keySet()) {
+            System.out.println(i+":"+salida.get(i)+"veces");
         }
     }
 }
