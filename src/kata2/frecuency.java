@@ -21,7 +21,6 @@ public class frecuency {
     }
     public HashMap res(){
         HashMap<Integer,Integer> out = new HashMap<>();
-        int aux;
         for (int i = 0; i < element.length; i++) {
             if(out.containsKey(element[i])){
                 out.put(element[i], out.get(element[i])+1);

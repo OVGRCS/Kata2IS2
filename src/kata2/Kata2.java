@@ -16,7 +16,7 @@ public class Kata2 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        int[] valores = {1,1,2,5,5,8,6,3,4,4,2};
+        int[] valores = {1,1,2,5,5,8,6,3,4,4,2,32,35,23,32,4,44};
         frecuency obj = new frecuency(valores);
         HashMap<Integer,Integer> salida = obj.res();
         for (Integer i : salida.keySet()) {
