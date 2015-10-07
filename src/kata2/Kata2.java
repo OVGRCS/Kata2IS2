@@ -20,10 +20,9 @@ public class Kata2 {
         Integer[] valores = {1,1,2,5,5,8,6,3,4,4,2,32,35,23,32,4,44};
         String[] nombres = {"Pedro","Antonio","Omaro","Pedro","Omaro","Omaro","Juan","Antonio"};
         
-        Frecuencia obj = new Frecuencia(nombres);
-        HashMap<Object,Integer> salida = obj.solver();
-        for (Object i : salida.keySet()) {
-            System.out.println(i+":"+salida.get(i)+"veces");
+        Frecuencia<String> frecuencia = CalculaFrecuencia.computeFrecuencia(nombres);
+        for (Object i : frecuencia.keySet()) {
+            System.out.println(i+":"+frecuencia.get(i)+"veces");
         }
     }
 }

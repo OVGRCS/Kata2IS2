@@ -5,32 +5,24 @@
 package kata2;
 
 import java.util.HashMap;
+import java.util.Set;
 
 /**
  *
  * @author usuario
  */
 public class Frecuencia<T> {
-    private final T[] in; 
+    private final HashMap<T,Integer> out = new HashMap<>();
 
-    public Frecuencia(T[] in) {
-        this.in = in;
+    public Integer get(Object key) {
+        return out.get(key);
     }
 
-    public T[] getIn() {
-        return in;
+    public Set<T> keySet() {
+        return out.keySet();
     }
     
-    public HashMap solver(){
-        HashMap<T,Integer> out = new HashMap<>();
-        
-        for (int i = 0; i < in.length; i++) {
-            if(out.containsKey(in[i])){
-                out.put(in[i], out.get(in[i])+1);
-            }else{
-                out.put(in[i], 1);
-            }
-        }
-        return out;
+    public void increment(T key){
+        out.put(key, out.containsKey(key) ? out.get(key)+1 : 1);
     }
 }
